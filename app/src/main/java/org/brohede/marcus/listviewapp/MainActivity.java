@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] myArray = {mountainNames[0], mountainLocations[0]};
+        String[] myArray = mountainNames;
         List<String> listData = new ArrayList<String>(Arrays.asList(myArray));
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),R.layout.list_item_textview,R.id.my_item_textview, listData);
 
@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         myListView.setAdapter(adapter);
 
         adapter.add("Greger");
-        // 4. Find the ListView layout element "my_listview" and create an object instance
-        // 5. Connect the ArrayAdapter from step 3 with ListView object created in step 4
         // 6. Style the ListView items according to Material Design
         //    See: https://material.io/guidelines/components/lists.html#lists-specs
         //    Look for "singel line specs" for "text only" lists and modify the list_item_textview
